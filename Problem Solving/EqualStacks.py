@@ -1,0 +1,28 @@
+l=list(map(int,input().split()))[:3]
+c1=list(map(int,input().split()))[:l[0]]
+c2=list(map(int,input().split()))[:l[1]]
+c3=list(map(int,input().split()))[:l[2]]
+a=sum(c1)
+b=sum(c2)
+c=sum(c3)
+i=0
+while(i<100):
+    if(a==b==c):
+        print(a)
+        break
+    else:
+        if(a>=b):
+            if(a>=c):
+                c1.pop(0)
+                a=sum(c1)
+            else:
+                c3.pop(0)
+                c=sum(c3)
+        else:
+            if(b>=c):
+                c2.pop(0)
+                b=sum(c2)
+            else:
+                c3.pop(0)
+                c=sum(c3)
+

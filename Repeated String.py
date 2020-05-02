@@ -1,0 +1,19 @@
+x=input()
+y=int(input())
+z=len(x)
+t=int(y/z)
+r=y-(z*t)
+o=x.count('a')
+p=0
+if(y%z==0):
+    t=int(y/z)
+    p=x.count('a')
+    print(p*t)
+else:
+    o=t*o
+    for i in range(0, r):
+        if(x[i]=="a"):
+            o=o+1
+        else:
+            continue
+    print(o)
